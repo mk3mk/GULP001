@@ -1,0 +1,24 @@
+header.header
+	nav.navbar.navbar-expand-lg.navbar-light.bg-light
+		a.navbar-brand(href='#')
+			img(src='images/bootstrap-solid.svg', alt='alt', width='30')
+		button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContentHeader', aria-controls='navbarSupportedContentHeader', aria-expanded='false', aria-label='Toggle navigation')
+			span.navbar-toggler-icon
+	  
+		.collapse.navbar-collapse(id='navbarSupportedContentHeader')
+			ul.navbar-nav.mr-auto
+				li.nav-item.active
+					a.nav-link(href='/') Home
+				li.nav-item
+					a.nav-link(href='/about.html') About
+				li.nav-item
+					a.nav-link(href='/contacts.html') Contacts
+				li.nav-item
+					a.nav-link(href='/blog.html') Blog
+			ul.navbar-nav.float-right
+				li.nav-item
+					a.nav-link(href='/login') Login
+				li.nav-item.dropdown
+					a.nav-link.dropdown-toggle(id='navbarDropdownMenuLink', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Accounts
+				.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+					a.dropdown-item(href='#') Settings

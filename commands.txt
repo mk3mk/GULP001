@@ -1,0 +1,27 @@
+
+
+
+npm init
+npm i --save-dev gulp
+npm i --save-dev gulp-sass
+npm i --save-dev gulp-concat
+npm i --save-dev gulp-pug
+npm i --save-dev gulp-uglify
+npm i --save-dev gulp-autoprefixer
+npm i --save-dev browser-sync
+npm i --save-dev gulp-imagemin
+npm i --save-dev gulp-newer
+npm i --save-dev del
+
+
+npm i --save-dev jquery
+npm i bootstrap
+
+запустить Gulp 
+gulp
+
+минифицировать изображения
+gulp images
+
+очистить папку с изображениями в папке dest 
+gulp cleanimg

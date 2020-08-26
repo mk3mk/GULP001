@@ -1,0 +1,126 @@
+extends templates/main
+
+block variables
+	- var title = 'About'
+
+block content
+
+	.pricing-header.px-3.py-3.pt-md-5.pb-md-4.mx-auto.text-center
+		h1.display-4 About
+		p.lead На этой странице приедставлены слайдеры и карусели. Такие как Bootstrap Carousel, Swiper Carousel
+	
+	.container
+		.row
+			.col-2
+			.col-8
+				h3.fw900 Bootstrap Carousel
+			.col-2
+
+	.container
+		.row
+			.col-2
+			.col-8
+				#carouselExampleCaptions.carousel.slide(data-ride='carousel')
+					ol.carousel-indicators
+						li.active(data-target='#carouselExampleCaptions', data-slide-to='0')
+						li(data-target='#carouselExampleCaptions', data-slide-to='1')
+						li(data-target='#carouselExampleCaptions', data-slide-to='2')
+					.carousel-inner
+						.carousel-item.active
+							img.d-block.w-100(src='images/image01.png', alt='...')
+							.carousel-caption.d-none.d-md-block
+								h5 First slide label
+								p Nulla vitae elit libero, a pharetra augue mollis interdum.
+						.carousel-item
+							img.d-block.w-100(src='images/image02.png', alt='...')
+							.carousel-caption.d-none.d-md-block
+								h5 Second slide label
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						.carousel-item
+							img.d-block.w-100(src='images/image03.png', alt='...')
+							.carousel-caption.d-none.d-md-block
+								h5 Third slide label
+								p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+					a.carousel-control-prev(href='#carouselExampleCaptions', role='button', data-slide='prev')
+						span.carousel-control-prev-icon(aria-hidden='true')
+						span.sr-only Previous
+					a.carousel-control-next(href='#carouselExampleCaptions', role='button', data-slide='next')
+						span.carousel-control-next-icon(aria-hidden='true')
+						span.sr-only Next
+			.col-2
+
+	.container
+		.row
+			.col-2
+			.col-8
+				h3.fw900 Swiper Carousel
+			.col-2
+
+	.container
+		.row
+			.col-2
+			.col-8
+				// Swiper
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							img(src='images/logo-00.png', alt='', width='100')
+						.swiper-slide
+							img(src='images/logo-01.png', alt='', width='100')
+						.swiper-slide
+							img(src='images/logo-02.png', alt='', width='100')
+						.swiper-slide
+							img(src='images/logo-03.png', alt='', width='100')
+						.swiper-slide
+							img(src='images/logo-04.png', alt='', width='100')
+					// Add Pagination
+					.swiper-pagination
+					// Add Arrows
+					.swiper-button-next
+					.swiper-button-prev
+			.col-2
+
+	// Swiper JS
+	script(src='https://unpkg.com/swiper/swiper-bundle.min.js')
+
+	// Initialize Swiper
+	script.
+		var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 0,
+		slidesPerGroup: 1,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		},
+		autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+		},
+		navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+		},
+
+		breakpoints: {
+		  1140: {
+		      slidesPerView: 4,
+		  },
+		  900: {
+		      slidesPerView: 3,
+		  },
+		  600: {
+		      slidesPerView: 2,
+		  },
+		  20: {
+		      slidesPerView: 1,
+		  }
+		},
+		});
+
+
+	
+
+

@@ -1,0 +1,32 @@
+extends templates/main
+
+block variables
+	- var title = 'Blog'
+
+block content
+	.pricing-header.px-3.py-3.pt-md-5.pb-md-4.mx-auto.text-center
+		h1.display-4 Blog
+		p.lead На этой странице приедставлен Блог
+
+
+
+
+
+	.container
+		.row
+			.col-4
+			.col-4
+				form.form-signin.text-center
+				img.mb-4(src='images/bootstrap-solid.svg', alt='', width='72', height='72')
+				h1.h3.mb-3.font-weight-normal Please sign in
+				label.sr-only(for='inputEmail') Email address
+				input#inputEmail.form-control(type='email', placeholder='Email address', required='', autofocus='')
+				label.sr-only(for='inputPassword') Password
+				input#inputPassword.form-control(type='password', placeholder='Password', required='')
+				.checkbox.mb-3
+					label
+						input(type='checkbox', value='remember-me')
+						|  Remember me
+				button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+				p.mt-5.mb-3.text-muted © 2017-2020			
+			.col-4
