@@ -25,3 +25,13 @@ gulp images
 
 очистить папку с изображениями в папке dest 
 gulp cleanimg
+
+
+
+resizing images
+
+graphicsmagick
+npm i gm
+
+gulp-image-resize
+npm install --save-dev gulp-image-resize
