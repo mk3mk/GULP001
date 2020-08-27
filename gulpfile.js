@@ -74,8 +74,8 @@ function deploy() {
   return src('dest/**')
     .pipe(rsync({
       root: 'dest/',
-      hostname: 'example.com',
-      destination: 'path/to/site/',
+      hostname: 'root@testodomen.ru',
+      destination: 'testodomen.ru/public_html/',
       recursive: true,
       archive: true,
       silent: false,
