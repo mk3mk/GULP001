@@ -75,7 +75,7 @@ function deploy() {
   return src('dest/**')
     .pipe(rsync({
       root: 'dest/',
-      hostname: 'root@testodomen.ru',
+      hostname: 'root@194.67.109.32',
       destination: 'testodomen.ru/public_html/',
       recursive: true,
       archive: true,
