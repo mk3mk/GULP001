@@ -84,20 +84,6 @@ function deploy() {
   }));
 }
 
-function img500x500() {
-  return src('src/images/images500x500/**/*.{jpg,png}')
-    .pipe(imageResize({
-      imageMagick: true,
-      width: 500,
-      height: 500,
-      crop : true,
-      upscale : false
-    }))
-    .pipe(imagemin())
-    .pipe(dest('dest/images/images500x500'))
-}
-
-
 // exports.default = series(styles, pugToHtml, browserSync);
 
 
