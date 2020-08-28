@@ -94,8 +94,6 @@ exports.cleanimg         =  cleanimg;
 exports.scripts          =  scripts;
 exports.pugToHtml        =  pugToHtml;
 exports.deploy           =  deploy;
-exports.img500x500       =  img500x500;
-
 
 exports.default = parallel(scripts, styles, pugToHtml, browsersync, startwatch);
 
