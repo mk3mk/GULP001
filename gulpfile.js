@@ -12,7 +12,7 @@ const        uglify   = require('gulp-uglify');
 const  autoprefixer   = require('gulp-autoprefixer');
 const  browserSync    = require('browser-sync').create();
 const  rsync          = require('gulp-rsync');
-const  imageResize    = require('gulp-image-resize');
+
 
 
 function scripts() {

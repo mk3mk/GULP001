@@ -76,6 +76,7 @@ https://ns6.hosting.reg.ru/manager/dnsmgr
 
 ----------------------------------------
 
+const  imageResize    = require('gulp-image-resize');
 
 function img500x500() {
   return src('src/images/images500x500/**/*.{jpg,png}')
