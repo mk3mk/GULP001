@@ -12,6 +12,7 @@ const        uglify   = require('gulp-uglify');
 const  autoprefixer   = require('gulp-autoprefixer');
 const  browserSync    = require('browser-sync').create();
 const  rsync          = require('gulp-rsync');
+const  babel          = require("gulp-babel");
 
 
 
@@ -20,10 +21,13 @@ function scripts() {
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    'node_modules/vue/dist/vue.min.js',
+    'node_modules/vue-router/dist/vue-router.min.js',
 
     'src/js/main.js'
   ])
   .pipe(concat('app.min.js')) // Конкатенируем в один файл
+  .pipe(babel())
 	.pipe(uglify()) // Сжимаем JavaScript
 	.pipe(dest('dest/js/')) // Выгружаем готовый файл в папку назначения
 	.pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы

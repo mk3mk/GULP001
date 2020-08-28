@@ -1,5 +1,25 @@
 
 
+https://webdesign-master.ru/blog/tools/2017-06-13-gulp-rsync.html
+
+npm i gulp-rsync gulp --save-dev
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+cd ~/.ssh
+ssh-keygen
+scp -p id_rsa.pub root@194.67.109.32:~
+ssh root@194.67.109.32
+Password:
+RemoteServer~$ mkdir -p ~/.ssh
+RemoteServer~$ chmod 700 ~/.ssh
+RemoteServer~$ cat id_rsa.pub >> ~/.ssh/authorized_keys
+RemoteServer~$ chmod 600 ~/.ssh/authorized_keys
+RemoteServer~$ rm -f ~/id_rsa.pub
+RemoteServer~$ logout
+ssh-add
+eval `ssh-agent -s`
+ssh-add
+
 
 npm init
 npm i --save-dev gulp
@@ -91,7 +111,10 @@ function img500x500() {
     .pipe(dest('dest/images/images500x500'))
 }
 
+----------------------------------------
 
+
+npm install --save-dev gulp-babel@next @babel/core
 
 
 
