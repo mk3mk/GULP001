@@ -70,13 +70,12 @@ function startwatch() {
   watch('src/**/*.pug', pugToHtml).on('change', browserSync.reload);
 }
 
-
 function deploy() {
   return src('dest/**')
     .pipe(rsync({
       root: 'dest/',
       hostname: 'root@194.67.109.32',
-      destination: 'testodomen.ru/public_html/',
+      destination: '/home/admin/web/testodomen.ru/public_html/',
       recursive: true,
       archive: true,
       silent: false,
