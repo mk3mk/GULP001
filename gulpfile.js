@@ -47,13 +47,6 @@ function pugToHtml() {
 function images() {
   return src('src/images/**/*')
     .pipe(newer('dest/images'))
-    .pipe(imageResize({
-      imageMagick: true,
-      width: 500,
-      height: 500,
-      crop : true,
-      upscale : false
-    }))
     .pipe(imagemin())
     .pipe(dest('dest/images'))
 }
