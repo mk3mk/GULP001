@@ -13,6 +13,8 @@ const  autoprefixer   = require('gulp-autoprefixer');
 const  browserSync    = require('browser-sync').create();
 const  rsync          = require('gulp-rsync');
 const  babel          = require("gulp-babel");
+const  imageResize    = require('gulp-image-resize');
+const  gm             = require('gulp-gm');
 
 
 
@@ -87,6 +89,19 @@ function deploy() {
   }));
 }
 
+function img500x500() {
+  return src('src/images/images500x500/**/*.{jpg,png}')
+    .pipe(imageResize({
+      imageMagick: true,
+      width: 500,
+      height: 500,
+      crop : true,
+      upscale : false
+    }))
+    .pipe(imagemin())
+    .pipe(dest('dest/images/images500x500'))
+}
+
 // exports.default = series(styles, pugToHtml, browserSync);
 
 
@@ -97,6 +112,7 @@ exports.cleanimg         =  cleanimg;
 exports.scripts          =  scripts;
 exports.pugToHtml        =  pugToHtml;
 exports.deploy           =  deploy;
+exports.img500x500       =  img500x500; 
 
 exports.default = parallel(scripts, styles, pugToHtml, browsersync, startwatch);
 

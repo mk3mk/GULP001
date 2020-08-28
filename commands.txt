@@ -111,6 +111,8 @@ function img500x500() {
     .pipe(dest('dest/images/images500x500'))
 }
 
+exports.img500x500       =  img500x500;
+
 ----------------------------------------
 
 

@@ -16,6 +16,7 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0-beta.2",
     "gulp-concat": "^2.6.1",
+    "gulp-gm": "0.0.9",
     "gulp-image-resize": "^0.13.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-newer": "^1.4.0",
