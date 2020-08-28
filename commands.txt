@@ -26,7 +26,7 @@ gulp images
 очистить папку с изображениями в папке dest 
 gulp cleanimg
 
-
+----------------------------------------
 
 resizing images
 
@@ -35,3 +35,45 @@ npm i gm
 
 gulp-image-resize
 npm install --save-dev gulp-image-resize
+
+----------------------------------------
+
+testing
+
+npm install node-unit-test
+npm install --save-dev mocha
+npm install --save-dev should
+npm install --save-dev supertest
+
+npm install -g mocha
+
+----------------------------------------
+
+
+Адрес сервера
+IPv4: 194.67.109.32
+IPv6: 2A00:F940:2:1:2:0:1:4EC9
+
+Доступ к серверу
+Логин: root
+Пароль: UZRan6JE!pL_4F
+
+DNS-хостинг
+Вы можете воспользоваться бесплатными DNS-серверами REG.RU
+ns5.hosting.reg.ru
+ns6.hosting.reg.ru
+Указав эти DNS-серверы для своего домена, вы сможете управлять им через ISPmanager или через DNSAdmin
+
+Как привязать домен к VPS без панели управления?
+Логин: v1044673
+Пароль: T4s4ajfjGA7FK!q
+
+Адрес панели DNSAdmin: https://dnsadmin.hosting.reg.ru/manager/ispmgr
+
+Адрес панели DNSManager:
+https://ns5.hosting.reg.ru/manager/dnsmgr
+https://ns6.hosting.reg.ru/manager/dnsmgr
+
+----------------------------------------
+
+
