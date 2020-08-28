@@ -9,7 +9,7 @@ cd ~/.ssh
 ssh-keygen
 scp -p id_rsa.pub root@194.67.109.32:~
 ssh root@194.67.109.32
-Password:
+Password:   UZRan6JE!pL_4F
 RemoteServer~$ mkdir -p ~/.ssh
 RemoteServer~$ chmod 700 ~/.ssh
 RemoteServer~$ cat id_rsa.pub >> ~/.ssh/authorized_keys
