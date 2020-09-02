@@ -119,6 +119,63 @@ exports.img500x500       =  img500x500;
 npm install --save-dev gulp-babel@next @babel/core
 
 
+----------------------------------------
+
+База данных создана успешно.
+
+База данных: admin_test
+Пользователь: admin_test
+Пароль: sF6xABIplv
+http://194-67-109-32.ovz.vps.regruhosting.ru/phpmyadmin/
+
+----------------------------------------
+
+Vesta Control Panel
+
+    https://194-67-109-32.ovz.vps.regruhosting.ru:8083
+    username: admin
+    password: V2qVl5R3zE
+
+----------------------------------------
+
+Vesta Control Panel - Lemon Silicium
+
+    https://194-67-108-175.cloudvps.regruhosting.ru:8083
+    username: admin
+    password: zpzgNSdarI
+
+
+Lemon Silicium #463533
+IP: 194.67.108.175
+IPv6: 2a00:f940:2:4:2::180e
+1 ГБ
+1 ядро
+25 ГБ SSD
+CentOS 7
+
+сервер «Lemon Silicium» с CentOS 7, IP-адрес 194.67.108.175
+
+Доступ к серверу
+
+Логин: root
+Пароль: haixooph7tho 
+
+ssh root@194.67.108.175
+haixooph7tho
+
+Доступ к DNS
+
+Адрес: https://dnsadmin.hosting.reg.ru/manager/ispmgr
+Логин: ce52210189
+Пароль: !yvvEacdoSAm9r_
+DNS: ns5.hosting.reg.ru • ns6.hosting.reg.ru 
+
+----------------------------------------
+
+
+
+
+
 
 
 
