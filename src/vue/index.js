@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import App from './App.vue'
-import TestScss from './Components/test-scss.vue'
+import App from './vue/App.vue'
+import TestScss from './vue/Components/test-scss.vue'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)

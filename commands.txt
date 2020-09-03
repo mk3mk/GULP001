@@ -8,8 +8,14 @@ chmod 700 ~/.ssh
 cd ~/.ssh
 ssh-keygen
 scp -p id_rsa.pub root@194.67.109.32:~
+
 ssh root@194.67.109.32
 Password:   UZRan6JE!pL_4F
+
+ssh mk3mk@194.67.109.32
+Password:   mbmbmb3333
+
+
 RemoteServer~$ mkdir -p ~/.ssh
 RemoteServer~$ chmod 700 ~/.ssh
 RemoteServer~$ cat id_rsa.pub >> ~/.ssh/authorized_keys
@@ -130,7 +136,7 @@ http://194-67-109-32.ovz.vps.regruhosting.ru/phpmyadmin/
 
 ----------------------------------------
 
-Vesta Control Panel
+Vesta Control Panel - старый сервер - vesta удалена 
 
     https://194-67-109-32.ovz.vps.regruhosting.ru:8083
     username: admin
@@ -172,10 +178,102 @@ DNS: ns5.hosting.reg.ru • ns6.hosting.reg.ru
 
 ----------------------------------------
 
+admin@HOME-PC MINGW64 /c/Program Files/Docker Toolbox
+docker is configured to use the default machine with IP 192.168.99.100
+For help getting started, check out the docs at https://docs.docker.com
+
+----------------------------------------
+
+для Ubuntu, Debian 
+apt-get clean && updatedb && apt-get update && apt-get upgrade && apt-get dist-upgrade
+
+
+
+для CentOS
+
+yum update
+yum upgrade
+
+create new user
+
+useradd mk3mk
+passwd mk3mk
+mbmbmb3333
+
+install midnight commander
+
+apt-get install sudo
+sudo apt-get install mc
+yum install mc
+
+создать группу sudo
+groupadd sudo
+добавить пользователя mk3mk в группу sudo 
+usermod -aG sudo mk3mk
+
+ssh mk3mk@194.67.108.175
+mbmbmb3333
+
+mc /etc/group
+cd /etc/group
+
+hostname
+
+
+----------------------------------------
+
+апрапрапрпарапр
+вывпаывапываываываывавыаываывапарапр
+апрапрапрапрапрапрап
+
+
+----------------------------------------
+
+
+установка LAMP на Debian
+
+su —
+apt-get update
+apt-get -y install apache2
+
+systemctl start apache2.service
+systemctl stop apache2.service
+systemctl restart apache2.service
+
+
+
+apt-get install ufw
+ufw status
+ufw allow 80/tcp
+ufw allow 443/tcp
+ufw reload
+ufw enable
+
+ufw allow 3306/tcp
+
+
+apt-get -y install mariadb-server mariadb-client mariadb-common
+apt-get -y install mysql mysql-server mysql-devel mysql-connector-java
+
+
+sudo apt update
+sudo apt upgrade -y && sudo reboot
+sudo apt -y install lsb-release apt-transport-https ca-certificates 
+sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+sudo apt update
+sudo apt -y install php7.4
+sudo apt install phpmyadmin
+sudo apt-get install php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip}
 
 
 
 
+
+
+Using PHP with Nginx:
+sudo systemctl disable --now apache2
+sudo apt-get install nginx php7.4-fpm
 
 
 
