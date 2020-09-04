@@ -1,4 +1,67 @@
+---------------------------------------------
 
+SSD-VPS-1 "Taupe Ytterbium"
+194.67.109.32
+debian9-x86_64
+
+ssh root@194.67.109.32
+UZRan6JE!pL_4F
+
+ssh mk3mk@194.67.109.32
+mbmbmb3333
+
+ISP-Manager:
+https://dnsadmin.hosting.reg.ru/manager/ispmgr
+v1044673
+T4s4ajfjGA7FK!q
+
+DNS-Manager:
+https://ns5.hosting.reg.ru/manager/dnsmgr
+https://ns6.hosting.reg.ru/manager/dnsmgr
+
+domains
+iskusstva.net
+
+---------------------------------------------
+
+Lemon Silicium #463533
+194.67.108.175
+CentOS 7
+
+ssh root@194.67.108.175
+haixooph7tho
+ssh mk3mk@194.67.108.175
+mbmbmb3333
+
+Vesta
+https://194-67-108-175.cloudvps.regruhosting.ru:8083
+admin
+zpzgNSdarI
+
+ISP-Manager:
+https://dnsadmin.hosting.reg.ru/manager/ispmgr
+ce52210189
+!yvvEacdoSAm9r_
+
+DNS-Manager:
+https://ns5.hosting.reg.ru/manager/dnsmgr
+https://ns6.hosting.reg.ru/manager/dnsmgr
+
+domains
+testodomen.ru
+
+databases
+admin_testo01
+admin_testo01
+admin_testo01
+
+admin_testo02
+admin_testo02
+admin_testo02
+
+---------------------------------------------
+
+Deploy - Gulp - RSync
 
 https://webdesign-master.ru/blog/tools/2017-06-13-gulp-rsync.html
 
@@ -90,13 +153,12 @@ ns5.hosting.reg.ru
 ns6.hosting.reg.ru
 Указав эти DNS-серверы для своего домена, вы сможете управлять им через ISPmanager или через DNSAdmin
 
-Как привязать домен к VPS без панели управления?
-Логин: v1044673
-Пароль: T4s4ajfjGA7FK!q
+ISP-Manager:
+https://dnsadmin.hosting.reg.ru/manager/ispmgr
+v1044673
+T4s4ajfjGA7FK!q
 
-Адрес панели DNSAdmin: https://dnsadmin.hosting.reg.ru/manager/ispmgr
-
-Адрес панели DNSManager:
+DNS-Manager:
 https://ns5.hosting.reg.ru/manager/dnsmgr
 https://ns6.hosting.reg.ru/manager/dnsmgr
 
@@ -218,6 +280,7 @@ mc /etc/group
 cd /etc/group
 
 hostname
+uname -r
 
 
 ----------------------------------------
@@ -239,6 +302,7 @@ apt-get -y install apache2
 systemctl start apache2.service
 systemctl stop apache2.service
 systemctl restart apache2.service
+systemctl status apache2.service
 
 
 
@@ -256,6 +320,13 @@ apt-get -y install mariadb-server mariadb-client mariadb-common
 apt-get -y install mysql mysql-server mysql-devel mysql-connector-java
 
 
+sudo systemctl status mysql
+sudo systemctl start mysql
+sudo systemctl restart mysql
+sudo systemctl stop mysql
+sudo systemctl reload mysql
+
+
 sudo apt update
 sudo apt upgrade -y && sudo reboot
 sudo apt -y install lsb-release apt-transport-https ca-certificates 
@@ -263,12 +334,13 @@ sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gp
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 sudo apt update
 sudo apt -y install php7.4
-sudo apt install phpmyadmin
 sudo apt-get install php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip}
+sudo apt install phpmyadmin
 
+dpkg-reconfigure phpmyadmin
 
-
-
+mysql -uroot
+MariaDB [(none)]>  set password = password("888");
 
 
 Using PHP with Nginx:
